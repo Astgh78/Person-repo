@@ -1,6 +1,6 @@
 package Core.model;
 
-public class BasePerson {
+public abstract class BasePerson implements PersonAction {
     //creating fields that are common for each person
     protected String name;
     protected String lastName;
@@ -9,10 +9,9 @@ public class BasePerson {
     protected String designation;
     protected String gender;
     protected int age;
-    protected String type;
 
     //creating constructor with all arguments
-    public BasePerson(String name, String lastName, String nickname, String email, String designation, String gender, int age, String type) {
+    public BasePerson(String name, String lastName, String nickname, String email, String designation, String gender, int age) {
         this.name = name;
         this.lastName = lastName;
         this.nickname = nickname;
@@ -20,7 +19,6 @@ public class BasePerson {
         this.designation = designation;
         this.gender = gender;
         this.age = age;
-        this.type = type;
     }
 
     // creating getters
